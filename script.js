@@ -33,24 +33,23 @@ class Pet{
     }
 }
 
-let xX = function comparison(){
-    const cane = new Pet ('Gin', 'Gina', 'cane', 'labrador', xX)
-    const gatto = new Pet ('Tonic', 'Gina', 'gatto', 'siamese', xX)
-    const coniglio = new Pet ('Gerry', 'Scotti', 'coniglio', 'fata perlata', xX)
-    const animali = [cane, gatto, coniglio]
-    for(let i = 0; i < animali.length; i++){
-        if(animali[i].ownerName === animali[i].ownerName){
-            return true
-        }else{
-            return false
-        }
-    }
-};
 
-const cane = new Pet ('Gin', 'Gina', 'cane', 'labrador', xX())
-const gatto = new Pet ('Tonic', 'Gina', 'gatto', 'siamese', xX())
-const coniglio = new Pet ('Gerry', 'Scotti', 'coniglio', 'fata perlata', xX())
+
+const cane = new Pet ('Gin', 'Gina', 'cane', 'labrador', false)
+const gatto = new Pet ('Tonic', 'Gina', 'gatto', 'siamese', false)
+const coniglio = new Pet ('Gerry', 'Scotti', 'coniglio', 'fata perlata', false)
 
 const animali = [cane, gatto, coniglio]
 
+for(let i = 0; i < animali.length; i++){
+
+    if(animali[i].ownerName === animali[i].ownerName){
+        animali[i].comparison = true
+    }else{
+        animali[i].comparison = false
+    }
+    
+}
+
 console.log(animali);
+
