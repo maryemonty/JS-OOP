@@ -7,8 +7,8 @@ class User{
     }
 }
 
-const x = new User('Carlo','Carletti','1','Bali')
-const y = new User('Carla','Carletta','98','Francia')
+const x = new User('Carlo','Carletti',1,'Bali')
+const y = new User('Carla','Carletta',98,'Francia')
 
 console.log(x.age);
 console.log(y.age);
@@ -24,32 +24,23 @@ function comp(){
 console.log(comp());
 
 class Pet{
-    constructor(petName, ownerName, species, breed, comparison){
+    constructor(petName, ownerName, species, breed){
         this.petName = petName;
         this.ownerName = ownerName;
         this.species = species;
         this.breed = breed;
-        this.comparison = comparison;
     }
+    static sameOwner(cane, gatto) {
+        return cane.ownerName === gatto.ownerName ? true : false;
+}
 }
 
+let cane = new Pet ('Gin', 'Gina', 'cane', 'labrador')
+let gatto = new Pet ('Tonic', 'Gina', 'gatto', 'siamese')
 
-
-const cane = new Pet ('Gin', 'Gina', 'cane', 'labrador', false)
-const gatto = new Pet ('Tonic', 'Gina', 'gatto', 'siamese', false)
-const coniglio = new Pet ('Gerry', 'Scotti', 'coniglio', 'fata perlata', false)
-
-const animali = [cane, gatto, coniglio]
-
-for(let i = 0; i < animali.length; i++){
-
-    if(animali[i].ownerName === animali[i].ownerName){
-        animali[i].comparison = true
-    }else{
-        animali[i].comparison = false
-    }
-    
-}
+let animali = [cane, gatto]
 
 console.log(animali);
+console.log(Pet.sameOwner(cane, gatto))
+
 
