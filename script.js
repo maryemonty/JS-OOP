@@ -22,3 +22,35 @@ function comp(){
 }
 
 console.log(comp());
+
+class Pet{
+    constructor(petName, ownerName, species, breed, comparison){
+        this.petName = petName;
+        this.ownerName = ownerName;
+        this.species = species;
+        this.breed = breed;
+        this.comparison = comparison;
+    }
+}
+
+let xX = function comparison(){
+    const cane = new Pet ('Gin', 'Gina', 'cane', 'labrador', xX)
+    const gatto = new Pet ('Tonic', 'Gina', 'gatto', 'siamese', xX)
+    const coniglio = new Pet ('Gerry', 'Scotti', 'coniglio', 'fata perlata', xX)
+    const animali = [cane, gatto, coniglio]
+    for(let i = 0; i < animali.length; i++){
+        if(animali[i].ownerName === animali[i].ownerName){
+            return true
+        }else{
+            return false
+        }
+    }
+};
+
+const cane = new Pet ('Gin', 'Gina', 'cane', 'labrador', xX())
+const gatto = new Pet ('Tonic', 'Gina', 'gatto', 'siamese', xX())
+const coniglio = new Pet ('Gerry', 'Scotti', 'coniglio', 'fata perlata', xX())
+
+const animali = [cane, gatto, coniglio]
+
+console.log(animali);
